@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 """
-*  This is an emulation about using 3 host(host_1, host_2, host_3),
-*  and set host_2 as a router
+*  This is an emulation about using 3 Hosts(host_1, host_2, host_3),
+*  and set host_2 as a Router
 """
 
 from mininet.cli import CLI
