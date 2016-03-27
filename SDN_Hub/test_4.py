@@ -30,13 +30,15 @@ if '__main__' == __name__:
     bridge.cmd('ifconfig bridge-eth0 0')
     bridge.cmd('ifconfig bridge-eth1 0')
     bridge.cmd('ifconfig bridge-eth2 0')
-    
+
+    # Add a group: mybr
     bridge.cmd("brctl addbr mybr")
     
     bridge.cmd("brctl addif mybr bridge-eth0")
     bridge.cmd("brctl addif mybr bridge-eth1")
     bridge.cmd("brctl addif mybr bridge-eth2")
 
+    # Wake up group
     bridge.cmd('ifconfig mybr up')
 
     host_1.cmd("ip address add 192.168.10.1/24 dev host_1-eth0")
